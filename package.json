@@ -1,0 +1,26 @@
+{
+  "name": "mars",
+  "version": "0.0.1",
+  "description": "Event Farm Design System",
+  "main": "app.js",
+  "scripts": {
+    "webpack:serve": "webpack-dev-server --config build/webpack.config.ts --env=development --watch",
+    "clean": "rm -rf dist && rm -rf node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "source-map-loader": "^0.2.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
