@@ -17,6 +17,16 @@ module.exports = (env: any): webpack.Configuration => {
             compress: true,
             port: 9000
         },
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js', '.json', '.scss']
+        },
+        module: {
+            rules: [
+                { test: /\.s?css?$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+                { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+                { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
+            ]
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 template: './src/index.html',
