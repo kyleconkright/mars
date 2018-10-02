@@ -6,7 +6,7 @@ module.exports = (env: any): webpack.Configuration => {
     console.log(env);
     return {
         mode: env,
-        entry: './src/app/app.ts',
+        entry: './src/app/app.tsx',
         output: {
             path: path.resolve(__dirname + './../dist/assets'),
             filename: 'bundle.js'
@@ -15,7 +15,8 @@ module.exports = (env: any): webpack.Configuration => {
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
             compress: true,
-            port: 9000
+            port: 9000,
+            historyApiFallback: true
         },
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.json', '.scss']
