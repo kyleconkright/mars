@@ -10,19 +10,27 @@ body {
 }
 
 aside {
+    h3 {
+        margin: 0 0 4px;
+    }
     ul {
         line-height: 1.75rem;
         ul {
+            border-left: 2px solid #eee;
+            margin: 0 0 0 -2px;
             li {
-                padding: 0 .35rem;
+                padding: 0 .5rem;
+                a {
+                    transition: all .25s;
+                }
                 a.active {
-                    background: linear-gradient(29deg, #ff5c28, #ed49ac, #e232f9);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    margin: 0 0 0 .5rem;
                 }
             }
         }
+    }
+    &.nav > ul > li {
+        margin-bottom: 1rem;
     }
 }
 
