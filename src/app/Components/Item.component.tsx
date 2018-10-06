@@ -15,7 +15,11 @@ class ItemComponent extends React.Component<ItemProps, ItemState> {
     }
 
     render() {
-        return <p>{this.props.match.params.id}</p>
+        return (
+            <section className="item">
+                <header>Item Header</header>
+            </section>
+        )
     }
 }
 

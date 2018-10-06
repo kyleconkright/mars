@@ -8,11 +8,13 @@ export default () => {
     return (
         <BrowserRouter>
             <main>
-                <header>MARS by EVENT FARM</header>
+                <header>
+                    <h1 className="mars-font">MARS</h1>
+                </header>
                 <Nav />
                 <div id="content">
                     <Switch>
-                        <Route path="/" exact render={() => 'home'} />
+                        <Route exact render={(props) => <Item {...props} />} />
                         <Route path="/sup/:id" exact render={(props) => <Item {...props} />} />
                         <Redirect from="/sup" to="/sup/1" />
                         <Route component={ NoMatch } />

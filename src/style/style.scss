@@ -1,3 +1,7 @@
+@import 'typography';
+
+
+//
 @import 'vars';
 
 * {
@@ -7,7 +11,7 @@
 }
 
 body {
-    background: #fffeff;
+    background: #fcfcfc;
     color: #3b3b3d;
 }
 
@@ -15,21 +19,27 @@ main {
     min-height: 100vh;
     display: grid;
     grid-template-areas:
-        "header header"
+        "header content"
         "nav content"
         "nav footer";
-    grid-template-columns: 200px auto;
+    grid-template-columns: minmax(200px, auto) 75%;
     grid-template-rows: 50px auto 50px;
 }
 
 header {
+    background: white;
     grid-area: header;
     padding: $space;
 }
 
-div.content {
+div#content {
     grid-area: content;
-    padding: $space;
+    header {
+        padding: 0 $space;
+        height: 50px;
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
 footer {
@@ -38,6 +48,7 @@ footer {
 }
 
 aside {
+    background: white;
     grid-area: nav;
     padding: $space;
 }
