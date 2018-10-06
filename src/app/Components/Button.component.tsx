@@ -9,21 +9,20 @@ interface ItemState {
     title: string;
 }
 
-class ItemComponent extends React.Component<ItemProps, ItemState> {
+class ButtonComponent extends React.Component<ItemProps, ItemState> {
     constructor(props: ItemProps) {
         super(props);
-        console.log(props);
     }
 
     render() {
         return (
             <section className="item">
                 <header>
-                    <h2>Item Header</h2>
+                    <h2>Buttons</h2>
                 </header>
             </section>
         )
     }
 }
 
-export default ItemComponent;
+export default ButtonComponent;

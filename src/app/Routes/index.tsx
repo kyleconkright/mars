@@ -2,6 +2,9 @@ import * as React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Nav from '../Components/Nav.component';
 import Item from './../Components/Item.component';
+import Button from '../Components/Button.component';
+import Panel from '../Components/Panel.component';
+import Card from '../Components/Card.component';
 import NoMatch from './NoMatch.compontent';
 
 export default () => {
@@ -14,13 +17,15 @@ export default () => {
                 <Nav />
                 <div id="content">
                     <Switch>
-                        <Route exact render={(props) => <Item {...props} />} />
-                        <Route path="/sup/:id" exact render={(props) => <Item {...props} />} />
+                        <Route path="/" exact render={(props) => <Item {...props} />} />
+                        <Route path="/button" exact render={(props) => <Button {...props} />} />
+                        <Route path="/card" exact render={(props) => <Card {...props} />} />
+                        <Route path="/panel" exact render={(props) => <Panel {...props} />} />
                         <Redirect from="/sup" to="/sup/1" />
                         <Route component={ NoMatch } />
                     </Switch>
                 </div>
-                <footer>footer</footer>
+                <footer>MARS by EVENT FARM</footer>
             </main>
         </BrowserRouter>
     )
