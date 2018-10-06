@@ -5,7 +5,9 @@ class NavComponent extends React.Component {
     render() {
         return (
             <aside>
-                <h1>Mars</h1>
+                <ul>
+                    <li>Components</li>
+                </ul>
             </aside>
         )
     }
