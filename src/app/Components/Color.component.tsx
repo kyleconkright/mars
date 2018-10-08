@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { match } from 'react-router-dom';
 
+const mars = require('./../../MARS/mars.js');
+
 interface ItemProps {
     match: match<any>;
 }
@@ -22,7 +24,10 @@ class ButtonComponent extends React.Component<ItemProps, ItemState> {
                 </header>
 
                 <div className="item-content">
-                    
+                    {Object.keys(mars.colors).map((key: any, i) => {
+                        const styles = {backgroundColor: mars.colors[key] }
+                        return <li key={i} style={styles}>{key}</li>
+                    })}
                 </div>
             </section>
         )
