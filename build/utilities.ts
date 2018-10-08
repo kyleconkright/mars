@@ -1,8 +1,8 @@
 const sass = require('node-sass');
 const sassUtils = require('node-sass-utils')(sass);
-const mars = require('./../src/MARS/mars');
+const mars = require(__dirname + './../src/MARS/mars.js');
 
-export const sassFunction = {
+export const sassLoaderFunctions = {
     'get($keys)': (keys: any) => {
         keys = keys.getValue().split('.');
         let result = mars;

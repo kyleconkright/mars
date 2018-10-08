@@ -1,12 +1,8 @@
 import * as webpack from 'webpack'
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-import { sassFunction } from './utilities';
 
-const sass = require('node-sass');
-const sassUtils = require('node-sass-utils')(sass);
-const mars = require('./../src/MARS/mars');
-
+import { sassLoaderFunctions } from './utilities';
 
 module.exports = (env: any): webpack.Configuration => {
     console.log(env);
@@ -40,19 +36,7 @@ module.exports = (env: any): webpack.Configuration => {
                     }, {
                         loader: 'sass-loader',
                         options: {
-                            functions: {
-                                'get($keys)': (keys: any) => {
-                                    keys = keys.getValue().split('.');
-                                    let result = mars;
-                                    let i;
-                                    for (i = 0; i < keys.length; i++) {
-                                        result = result[keys[i]];
-                                    }
-                                    result = sassUtils.castToSass(result);
-                                    return result;
-                                }
-                            }
-                            
+                            functions: sassLoaderFunctions
                         }
                     }]
                 },
