@@ -18,17 +18,11 @@ class ButtonComponent extends React.Component<ItemProps, ItemState> {
         return (
             <section className="item">
                 <header>
-                    <h2>Buttons</h2>
+                    <h2>Colors</h2>
                 </header>
 
                 <div className="item-content">
-                    <button className="ef-btn">Submit</button>
-
-                    <pre>
-                        <code>
-                            &lt;button class="ef-btn">&lt;/button>
-                        </code>
-                    </pre>
+                    
                 </div>
             </section>
         )

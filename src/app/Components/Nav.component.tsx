@@ -10,6 +10,7 @@ class NavComponent extends React.Component {
                     <li>
                         <h3>Components</h3>
                         <ul>
+                            <li><NavLink to="/color">Color</NavLink></li>
                             <li><NavLink to="/button">Button</NavLink></li>
                             <li><NavLink to="/card">Card</NavLink></li>
                             <li><NavLink to="/panel">Panel</NavLink></li>

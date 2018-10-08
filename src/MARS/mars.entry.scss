@@ -1,2 +1,7 @@
-body {
+.ef-btn {
+    background: get('colors.blue');
+    color: white;
+    border: none;
+    border-radius: 1px;
+    padding: 0.35rem .65rem;
 }
