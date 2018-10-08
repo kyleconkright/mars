@@ -1,13 +1,16 @@
 import * as webpack from 'webpack'
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+import { sassFunction } from './utilities';
+
 const sass = require('node-sass');
 const sassUtils = require('node-sass-utils')(sass);
-const path = require('path');
+const mars = require('./../src/MARS/mars');
 
-const sassVars = require(__dirname + './../src/MARS/mars.js');
 
 module.exports = (env: any): webpack.Configuration => {
     console.log(env);
+    console.log(mars);
 
     return {
         mode: env,
@@ -40,7 +43,7 @@ module.exports = (env: any): webpack.Configuration => {
                             functions: {
                                 'get($keys)': (keys: any) => {
                                     keys = keys.getValue().split('.');
-                                    let result = sassVars;
+                                    let result = mars;
                                     let i;
                                     for (i = 0; i < keys.length; i++) {
                                         result = result[keys[i]];
@@ -49,6 +52,7 @@ module.exports = (env: any): webpack.Configuration => {
                                     return result;
                                 }
                             }
+                            
                         }
                     }]
                 },

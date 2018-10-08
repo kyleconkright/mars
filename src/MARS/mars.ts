@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     base: "16px",
     spacing: "1rem",
     breakpoints: {
@@ -71,4 +71,4 @@ module.exports = {
         'purple-lighter': '#a195d3',
         'purple-lightest': '#d1cbe9'
     },
-  };
+  } as any;
