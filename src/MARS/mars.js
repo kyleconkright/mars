@@ -1,6 +1,6 @@
 module.exports = {
   base: "16px",
-  spacing: "1rem",
+  space: "1rem",
   breakpoints: {
     xs: "0em" /* 0px */,
     sm: "30em" /* 480px */,

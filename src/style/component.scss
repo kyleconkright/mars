@@ -1,0 +1,11 @@
+#color-component .item-content {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+    grid-gap: mars('space');
+    li {
+        padding: mars('space');
+        .swatch {
+            height: 140px;
+        }
+    }
+}

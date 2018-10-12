@@ -18,7 +18,7 @@ class ButtonComponent extends React.Component<ItemProps, ItemState> {
 
     render() {
         return (
-            <section className="item">
+            <section id="color-component" className="item">
                 <header>
                     <h2>Colors</h2>
                 </header>
@@ -26,7 +26,13 @@ class ButtonComponent extends React.Component<ItemProps, ItemState> {
                 <div className="item-content">
                     {Object.keys(mars.color).map((key: any, i) => {
                         const styles = {backgroundColor: mars.color[key] }
-                        return <li key={i} style={styles}>{key}</li>
+                        return (
+                            <li key={i}>
+                                <div style={styles} className="swatch"></div>
+                                <p>{key}</p>
+                                <p>{mars.color[key]}</p>
+                            </li>
+                        )
                     })}
                 </div>
             </section>
