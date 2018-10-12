@@ -3,7 +3,7 @@ const sassUtils = require('node-sass-utils')(sass);
 const sassVars = require(__dirname + './../src/MARS/mars.js');
 
 export const sassLoaderFunctions = {
-    'get($keys)': (keys: any) => {
+    'mars($keys)': (keys: any) => {
         keys = keys.getValue().split('.');
         let result = sassVars;
         let i;

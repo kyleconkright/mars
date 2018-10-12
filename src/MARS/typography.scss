@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'CircularBook';
+    src: 
+        url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-book.woff') format('woff'),
+        url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-book.ttf') format('ttf'),
+}
+
+@font-face {
+    font-family: 'CircularMedium';
+    src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-medium.ttf');
+    src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-medium.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'CircularBold';
+    src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-bold.ttf');
+    src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-bold.woff') format('woff'),
+} 

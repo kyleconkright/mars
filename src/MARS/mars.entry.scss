@@ -1,5 +1,7 @@
+@import 'typography';
+
 .ef-btn {
-    background: get('colors.blue');
+    background: mars('color.blue');
     color: white;
     border: none;
     border-radius: 1px;

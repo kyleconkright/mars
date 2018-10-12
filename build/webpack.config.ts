@@ -40,7 +40,16 @@ module.exports = (env: any): webpack.Configuration => {
                     }]
                 },
                 { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-                { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
+                { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+                {
+                    test: /\.(ttf|eot|woff|woff2)$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]',
+                        },
+                    },
+                },
             ]
         },
         plugins: [

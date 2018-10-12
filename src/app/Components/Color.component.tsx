@@ -24,8 +24,8 @@ class ButtonComponent extends React.Component<ItemProps, ItemState> {
                 </header>
 
                 <div className="item-content">
-                    {Object.keys(mars.colors).map((key: any, i) => {
-                        const styles = {backgroundColor: mars.colors[key] }
+                    {Object.keys(mars.color).map((key: any, i) => {
+                        const styles = {backgroundColor: mars.color[key] }
                         return <li key={i} style={styles}>{key}</li>
                     })}
                 </div>

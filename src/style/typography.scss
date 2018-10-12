@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Notable');
+@import url('https://fonts.googleapis.com/css?family=Notable');
 
 html {
     font-size: 14px;
 }
 
 body {
-    font-family: 'Open Sans','Helvetica Neue', 'Arial', sans-serif;
+    font-family: mars('typography.title');
+    color: mars('color.text');
     font-size: inherit;
 }
 
@@ -44,7 +45,7 @@ footer {
 .mars-font {
     display: inline-block;
     font-family: Notable;
-    background: linear-gradient(29deg, #ff5c28, #ed49ac, #e232f9);
+    background: mars('gradient.tropica');
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
