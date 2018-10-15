@@ -15,4 +15,49 @@
     font-family: 'CircularBold';
     src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-bold.ttf');
     src: url('./../../src/MARS/fonts/lineto-circular/lineto-circular-pro-bold.woff') format('woff'),
-} 
+}
+
+body {
+    line-height: 1.618;
+    font-size: mars('base');
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+@mixin h1 {
+    font-family: mars('typography.title-bold');
+    font-size: 1rem * 2.25;
+}
+
+@mixin h2 {
+    font-family: mars('typography.title');
+    font-size: 1rem * 1.5;
+}
+
+@mixin h3 {
+    font-family: mars('typography.title');
+    font-size: 1rem;
+}
+
+@mixin h4 {
+    font-family: mars('typography.title-light');
+    font-size: 1rem;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}

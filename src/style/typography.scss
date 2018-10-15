@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Notable');
 
-html {
-    font-size: 14px;
-}
-
 body {
     font-family: mars('typography.title');
     color: mars('color.text');
-    font-size: inherit;
 }
 
 aside {
@@ -21,6 +16,7 @@ aside {
             margin: 0 0 0 -2px;
             li {
                 padding: 0 .5rem;
+                font-family: mars('typography.title-light');
                 a {
                     transition: all .25s;
                 }
@@ -49,7 +45,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     line-height: 26px;
     height: 32px;
     letter-spacing: .25rem;

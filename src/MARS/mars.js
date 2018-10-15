@@ -1,5 +1,5 @@
 module.exports = {
-  base: "16px",
+  base: '16px',
   space: "1rem",
   breakpoints: {
     xs: "0em" /* 0px */,
@@ -8,8 +8,8 @@ module.exports = {
     lg: "75em" /* 1200px */
   },
   typography: {
-    'title': "CircularBook",
-    'title-light': "CircularLight",
+    'title': "CircularMedium",
+    'title-light': "CircularBook",
     'title-bold': "CircularBold",
   },
   color: {

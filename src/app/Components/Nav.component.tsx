@@ -8,9 +8,16 @@ class NavComponent extends React.Component {
             <aside className="nav">
                 <ul>
                     <li>
-                        <h3>Components</h3>
+                        <h3>Basics</h3>
                         <ul>
                             <li><NavLink to="/color">Color</NavLink></li>
+                            <li><NavLink to="/typography">Typography</NavLink></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <h3>Components</h3>
+                        <ul>
                             <li><NavLink to="/button">Button</NavLink></li>
                             <li><NavLink to="/card">Card</NavLink></li>
                             <li><NavLink to="/panel">Panel</NavLink></li>
